@@ -2,8 +2,8 @@
   <div class="confirm">
     <div>
       <h1>ログイン完了！！</h1>
-      <p>{{this.userName}}</p>
-      <p>{{this.usermail}}</p>
+      <p>{{this.user.params.userName}}</p>
+      <p>{{this.user.params.userMail}}</p>
       <button @click="logout">ログアウト</button>
     </div>
   </div>
@@ -11,9 +11,6 @@
 <script>
 import firebase from "~/plugins/firebase";
 export default {
-  props:{
-   user:String
-  },
   methods: {
     logout: function() {
       firebase.auth().signOut();
