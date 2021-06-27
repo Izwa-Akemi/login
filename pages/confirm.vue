@@ -1,7 +1,8 @@
 <template>
   <div class="confirm">
-    <p>{{ user.displayName }}</p><br>
+    <p>{{ user.displayName }}</p>
     <p>{{ user.email }}</p>
+    <button @click="logOut">ログアウト</button>
   </div>
 </template>
 <script>
@@ -18,6 +19,12 @@ export default {
       this.user = user;
     });
   },
+  methods:{
+      logOut () {
+      firebase.auth().signOut()
+      this.$router.push('/')
+    }
+  }
 };
 </script>
 <style scoped>
