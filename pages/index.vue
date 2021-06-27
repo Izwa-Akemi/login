@@ -11,9 +11,16 @@ import firebase from "~/plugins/firebase";
 export default {
   methods: {
     login() {
-         firebase.auth().signInWithRedirect(new firebase.auth.GoogleAuthProvider());
-         this.$router.push({name:"confirm",params:{user:this.userName,user:this.userMail}});
-
+     const provider = new firebase.auth.GoogleAuthProvider()
+      firebase.auth().signInWithRedirect(provider)
+      firebase.auth().onAuthStateChanged(user => {
+      if (user) {
+        this.$router.push('/confirm')
+      } else {
+        // ログイン失敗。エラー処理など(通常はあり得ない？)
+        this.$router.push('/')
+      }
+    })
     },
   },
 };
