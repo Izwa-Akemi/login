@@ -1,5 +1,6 @@
 <template>
   <div class="confirm">
+    <h2>ログイン完了</h2>
     <p>{{ user.displayName }}</p><br>
     <p>{{ user.email }}</p><br>
     <button @click="logOut">ログアウト</button>
