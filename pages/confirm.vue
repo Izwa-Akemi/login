@@ -1,11 +1,12 @@
 <template>
   <div class="confirm">
+    <p>{{ user.displayName }}でログイン中</p>
     <p>{{ user.email }}でログイン中</p>
     <button @click="logOut">ログアウト</button>
   </div>
 </template>
 <script>
-import firebase from "@/plugins/firebase";
+import firebase from "~/plugins/firebase";
 
 export default {
   asyncData() {
