@@ -1,7 +1,7 @@
 <template>
   <div class="confirm">
-    <p>{{ user.displayName }}でログイン中</p>
-    <p>{{ user.email }}でログイン中</p>
+    <p>{{ user.displayName }}</p>
+    <p>{{ user.email }}</p>
     <button @click="logOut">ログアウト</button>
   </div>
 </template>
