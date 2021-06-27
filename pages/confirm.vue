@@ -2,8 +2,7 @@
   <div class="confirm">
     <div>
       <h1>ログイン完了！！</h1>
-      <p>{{user.displayName}}</p>
-      <p>{{user.displayEmail}}</p>
+    
       <button @click="logout">ログアウト</button>
     </div>
   </div>

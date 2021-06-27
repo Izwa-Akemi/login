@@ -12,7 +12,7 @@ export default {
   methods: {
     login() {
          firebase.auth().signInWithRedirect(new firebase.auth.GoogleAuthProvider());
-         this.$router.replace('/confirm')
+         this.$root.push('/confirm');
 
     },
   },
