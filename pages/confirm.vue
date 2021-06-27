@@ -31,8 +31,9 @@ export default {
 <style scoped>
 .confirm {
   height: 100vh;
-  display: flex;
+  text-align:center;
+  /*display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center;*/
 }
 </style>
