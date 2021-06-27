@@ -13,14 +13,6 @@ export default {
     login() {
      const provider = new firebase.auth.GoogleAuthProvider()
       firebase.auth().signInWithRedirect(provider)
-      firebase.auth().onAuthStateChanged(user => {
-      if (user) {
-        this.$router.push('/confirm')
-      } else {
-        // ログイン失敗。エラー処理など(通常はあり得ない？)
-        this.$router.push('/')
-      }
-    })
     },
   },
 };

@@ -16,14 +16,14 @@ export default {
   },
   mounted: function () {
     firebase.auth().onAuthStateChanged((user) => {
-        this.user = user;
+      this.user = user;
     });
   },
-  methods: {
-    logOut() {
-      firebase.auth().signOut();
-    },
-  },
+  methods:{
+      logOut () {
+      firebase.auth().signOut()
+    }
+  }
 };
 </script>
 <style scoped>
